@@ -7,15 +7,11 @@ _IMAGES_DIR = _RESOURCES_DIR / 'images'
 _LEVELS_DIR = _RESOURCES_DIR / 'levels'
 
 # Общие настройки
-WINDOW_WIDTH = 800
-WINDOW_HEIGHT = 533
 WINDOW_CAPTION = 'Зомби шутер'
 FRAME_RATE = 60
 BACKGROUND_COLOR = (0, 0, 0)
 
 # Настройки для игрока
-PLAYER_SPAWN_X = 0
-PLAYER_SPAWN_Y = 0
 PLAYER_IMAGE = _IMAGES_DIR / 'player_min.png'
 PLAYER_SPEED = 5
 PLAYER_HEALTH = 100

@@ -6,7 +6,7 @@ import pygame
 
 class Game:
     """Класс игры, который содержит в себе основные настроки."""
-    def __init__(self, width, height, caption, background, frame_rate, level):
+    def __init__(self, caption, background, frame_rate, level):
         """
         background - задний фон игры
         frame_rate - FPS игры

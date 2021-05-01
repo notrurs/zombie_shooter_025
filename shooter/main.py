@@ -7,13 +7,9 @@ from game_object.entities.zombie import Zombie
 from game_object.landscapes.ground import Ground
 from game_object.landscapes.stone import Stone
 
-from config import WINDOW_WIDTH
-from config import WINDOW_HEIGHT
 from config import WINDOW_CAPTION
 from config import BACKGROUND_COLOR
 from config import FRAME_RATE
-from config import PLAYER_SPAWN_X
-from config import PLAYER_SPAWN_Y
 from config import PLAYER_IMAGE
 from config import PLAYER_SPEED
 from config import PLAYER_HEALTH
@@ -35,14 +31,12 @@ class GameLogic(Game):
         """
         player - объект игрока
         """
-        super().__init__(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_CAPTION, BACKGROUND_COLOR, FRAME_RATE, LEVEL_1)
+        super().__init__(WINDOW_CAPTION, BACKGROUND_COLOR, FRAME_RATE, LEVEL_1)
         self.player = None
         self.create_objects()
 
     def create_objects(self):
         """Метод, вызывающий все остальные методы, которые что-то создают"""
-        # self.create_player()
-        # self.create_zombie()
         self.create_level()
 
     def create_level(self):
