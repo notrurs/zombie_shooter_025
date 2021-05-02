@@ -35,4 +35,4 @@ LEVEL_1 = _LEVELS_DIR / 'level.txt'
 # Объекты окружения
 LANDSCAPE_GROUND = _IMAGES_DIR / 'ground.png'
 LANDSCAPE_STONE = _IMAGES_DIR / 'stone.png'
-LANDSCAPE_PALM = _IMAGES_DIR / 'palm.png'
+LANDSCAPE_PALM = _IMAGES_DIR / 'palm-1.png'
