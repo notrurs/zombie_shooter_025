@@ -6,6 +6,7 @@ from game_object.entities.bullet import Bullet
 from game_object.entities.zombie import Zombie
 from game_object.landscapes.ground import Ground
 from game_object.landscapes.stone import Stone
+from game_object.landscapes.palm import Palm
 
 from config import WINDOW_CAPTION
 from config import BACKGROUND_COLOR
@@ -53,6 +54,8 @@ class GameLogic(Game):
                 self.landscapes.add(Ground(x, y))
                 if obj == '-':
                     self.obstacles.add(Stone(x, y))
+                elif obj == '+':
+                    self.obstacles.add(Palm(x, y))
                 elif obj == 'P':
                     self.create_player(x, y)
                 elif obj == 'Z':
