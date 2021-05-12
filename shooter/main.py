@@ -23,7 +23,7 @@ from config import ZOMBIE_SPEED
 from config import ZOMBIE_RADIUS_AGR
 from config import ZOMBIE_HEALTH
 from config import ZOMBIE_DAMAGE
-from config import LEVEL_1
+from config import LEVEL_2
 
 
 class GameLogic(Game):
@@ -32,7 +32,7 @@ class GameLogic(Game):
         """
         player - объект игрока
         """
-        super().__init__(WINDOW_CAPTION, BACKGROUND_COLOR, FRAME_RATE, LEVEL_1)
+        super().__init__(WINDOW_CAPTION, BACKGROUND_COLOR, FRAME_RATE, LEVEL_2)
         self.player = None
         self.create_objects()
 
@@ -42,7 +42,7 @@ class GameLogic(Game):
 
     def create_level(self):
         """Метод, создающий уровень"""
-        with open(LEVEL_1) as f:
+        with open(LEVEL_2) as f:
             level_objects_list = f.readlines()
 
         x = y = 0
@@ -60,6 +60,8 @@ class GameLogic(Game):
                     self.create_player(x, y)
                 elif obj == 'Z':
                     self.create_zombie(x, y)
+                elif obj == 'X':
+                    self.create_zombie(x, y)                    
                 x += 40
             y += 40
             x = 0
