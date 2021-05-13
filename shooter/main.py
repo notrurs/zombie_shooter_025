@@ -3,7 +3,7 @@ import pygame
 from game.game import Game
 from game_object.entities.player import Player
 from game_object.entities.bullet import Bullet
-from game_object.entities.bullet import Etwas
+from game_object.entities.etwas import Etwas
 from game_object.entities.zombie import Zombie
 from game_object.landscapes.ground import Ground
 from game_object.landscapes.stone import Stone
