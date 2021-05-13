@@ -3,6 +3,7 @@ import pygame
 from game.game import Game
 from game_object.entities.player import Player
 from game_object.entities.bullet import Bullet
+from game_object.entities.bullet import Etwas
 from game_object.entities.zombie import Zombie
 from game_object.landscapes.ground import Ground
 from game_object.landscapes.stone import Stone
@@ -23,6 +24,12 @@ from config import ZOMBIE_SPEED
 from config import ZOMBIE_RADIUS_AGR
 from config import ZOMBIE_HEALTH
 from config import ZOMBIE_DAMAGE
+from config import ETWAS_IMAGE
+from config import ETWAS_SPEED
+from config import ETWAS_RADIUS_AGR
+from config import ETWAS_HEALTH
+from config import ETWAS_DAMAGE
+
 from config import LEVEL_1
 
 
@@ -60,6 +67,8 @@ class GameLogic(Game):
                     self.create_player(x, y)
                 elif obj == 'Z':
                     self.create_zombie(x, y)
+                elif obj == 'E':
+                    self.create_etwas(x, y)
                 x += 40
             y += 40
             x = 0
@@ -106,6 +115,19 @@ class GameLogic(Game):
             ZOMBIE_DAMAGE
         )
         self.enemies.add(zombie)
+        
+    def create_zombie(self, x, y):
+        """Метод, создающий нечто"""
+        etwas = Etwas(
+            x,
+            y,
+            ETWAS_IMAGE,
+            ETWAS_SPEED,
+            ETWAS_RADIUS_AGR,
+            ETWAS_HEALTH,
+            ETWAS_DAMAGE
+        )
+        self.enemies.add(etwas)
 
     def handle_bullet(self):
         """Обработчик создания пуль"""
