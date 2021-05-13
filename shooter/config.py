@@ -29,6 +29,13 @@ ZOMBIE_RADIUS_AGR = 70
 ZOMBIE_HEALTH = 2000
 ZOMBIE_DAMAGE = 40
 
+# Настройки сущности
+ETWAS_IMAGE = _IMAGES_DIR / 'etwas.png'
+ETWAS_SPEED = 7
+ETWAS_RADIUS_AGR = 70
+ETWAS_HEALTH = 2000
+ETWAS_DAMAGE = 40
+
 # Список уровней
 LEVEL_1 = _LEVELS_DIR / 'level.txt'
 
