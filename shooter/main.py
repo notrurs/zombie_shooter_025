@@ -1,3 +1,9 @@
+import pathlib
+import sys
+
+# Чтобы пакет shooter был виден всем, добавляем путь к папке zombie_shooter_025
+sys.path.append(str(pathlib.Path().cwd().parent))
+
 import pygame
 
 from game.game import Game
