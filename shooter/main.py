@@ -116,7 +116,7 @@ class GameLogic(Game):
         )
         self.enemies.add(zombie)
         
-    def create_zombie(self, x, y):
+    def create_etwas(self, x, y):
         """Метод, создающий нечто"""
         etwas = Etwas(
             x,
