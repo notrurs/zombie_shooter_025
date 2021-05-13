@@ -6,6 +6,8 @@ from math import radians
 import pygame
 
 from shooter.game_object.entity import Entity
+# from game_object.entity import Entity
+
 
 
 class Player(Entity):

@@ -30,7 +30,9 @@ ZOMBIE_HEALTH = 2000
 ZOMBIE_DAMAGE = 40
 
 # Список уровней
-LEVEL_1 = _LEVELS_DIR / 'level.txt'
+# LEVEL_1 = _LEVELS_DIR / 'level.txt'
+LEVEL_2 = _LEVELS_DIR / 'level_2.txt'
+
 
 # Объекты окружения
 LANDSCAPE_GROUND = _IMAGES_DIR / 'ground.png'
