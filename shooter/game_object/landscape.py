@@ -17,3 +17,6 @@ class Landscape(pygame.sprite.Sprite):
     def blit(self, surface):
         """Метод, отображающий объект окружения"""
         surface.blit(self.image, self.rect)
+
+
+

@@ -10,8 +10,11 @@ from game.game import Game
 from game_object.entities.player import Player
 from game_object.entities.bullet import Bullet
 from game_object.entities.zombie import Zombie
+from game_object.entities.zombie import Fish
 from game_object.landscapes.ground import Ground
+from game_object.landscapes.ground import Mentol
 from game_object.landscapes.stone import Stone
+from game_object.landscapes.stone import Spirulina
 from game_object.landscapes.palm import Palm
 
 from config import WINDOW_CAPTION
@@ -29,7 +32,12 @@ from config import ZOMBIE_SPEED
 from config import ZOMBIE_RADIUS_AGR
 from config import ZOMBIE_HEALTH
 from config import ZOMBIE_DAMAGE
-# from config import LEVEL_1
+from config import FISH_IMAGE
+from config import FISH_SPEED
+from config import FISH_RADIUS_AGR
+from config import FISH_HEALTH
+from config import FISH_DAMAGE
+from config import LEVEL_1
 from config import LEVEL_2
 
 class GameLogic(Game):
@@ -112,6 +120,19 @@ class GameLogic(Game):
             ZOMBIE_DAMAGE
         )
         self.enemies.add(zombie)
+        
+    def create_fish(self, x, y):
+        """Метод, создающий зомби"""
+        fish = Fish(
+            x,
+            y,
+            FISH_IMAGE,
+            FISH_SPEED,
+            FISH_RADIUS_AGR,
+            FISH_HEALTH,
+            FISH_DAMAGE
+        )
+        self.enemies.add(fish)    
 
     def handle_bullet(self):
         """Обработчик создания пуль"""
